@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridOS | Economics Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Grid<span class="highlight">OS</span></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="economics.html" class="active">Economics Engine</a></li>
+                <li><a href="physics.html">Physics Engine</a></li>
+                <li><a href="research.html">Research Synergy</a></li>
+                <li><a href="appendix.html">Technical Appendix</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>The Economics Engine</h1>
+            <p class="subtitle">High-Fidelity Market Forecasting with Transformer Models</p>
+        </section>
+
+        <section>
+            <h2>Challenge: Predicting Volatility in the NYISO Market</h2>
+            <p>The N.Y.C. load zone (Zone J) is a classic "load pocket" with structural transmission constraints and a reliance on expensive in-city peaker plants. This creates a highly volatile market where accurately forecasting Locational Marginal Prices (LMPs) is critical for managing financial risk and capturing opportunity.</p>
+        </section>
+
+        <section>
+            <h2>Methodology: Transformer Architecture vs. Industry Baselines</h2>
+            <p>To prove our capability, we benchmarked a state-of-the-art **Transformer model** against two standards: a statistical **SARIMA** model and a powerful machine learning competitor, **XGBoost**. The Transformer's self-attention mechanism is uniquely suited to capture the complex, long-range dependencies in energy market data that linear models miss.</p>
+        </section>
+        
+        <section>
+            <h2>Data Pipeline: Real-World NYISO Operational Data</h2>
+            <p>The model was trained and tested on a rich dataset synthesized from real NYISO reports for September 30, 2025, including:</p>
+            <ul>
+                <li>Day-Ahead Market (DAM) & Hour-Ahead Market (HAM) Energy Reports</li>
+                <li>Real-Time Generation Fuel Mix</li>
+                <li>Zonal Day-Ahead LMPs for N.Y.C.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Results: A Decisive Performance Advantage</h2>
+            <p>The GridOS Transformer model demonstrated a significant and commercially meaningful improvement in forecasting accuracy over all baselines.</p>
+            <div class="card-container">
+                <div class="card full-width">
+                    <h3>Model Performance Comparison (Mean Absolute Error)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Mean Absolute Error (MAE)</th>
+                                <th>Improvement vs. SARIMA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SARIMA (Baseline)</td>
+                                <td>$19.45</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>XGBoost (Competitor)</td>
+                                <td>$9.88</td>
+                                <td>49.20%</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>GridOS Transformer</strong></td>
+                                <td><strong>$7.81</strong></td>
+                                <td><strong>59.85%</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="economic_forecasting/plots/mae_comparison.png" alt="MAE Comparison Chart">
+                <img src="economic_forecasting/plots/model_predictions.png" alt="Model Predictions vs Actual">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GridOS. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
