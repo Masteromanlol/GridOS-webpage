@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridOS | Physics Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Grid<span class="highlight">OS</span></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="economics.html">Economics Engine</a></li>
+                <li><a href="physics.html" class="active">Physics Engine</a></li>
+                <li><a href="research.html">Research Synergy</a></li>
+                <li><a href="appendix.html">Technical Appendix</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>The Physics Engine</h1>
+            <p class="subtitle">Predictive Security Assessment with Graph Neural Networks</p>
+        </section>
+
+        <section>
+            <h2>Challenge: Proactive Congestion & Contingency Analysis</h2>
+            <p>Grid operators must ensure the system can withstand the unexpected failure of a critical component (an "N-1 contingency"). Traditional simulation tools are too slow for real-time analysis, forcing a reactive posture. We need a way to predict the physical consequences of a fault before it happens.</p>
+        </section>
+
+        <section>
+            <h2>Methodology: Graph Neural Networks for Topological Awareness</h2>
+            <p>A power grid is a natural graph. We use a **Graph Attention Network (GAT)**, a state-of-the-art GNN, that learns directly from the grid's physical topology. Its attention mechanism allows it to identify the most critical relationships between buses and lines to predict how stress will propagate across the network.</p>
+        </section>
+        
+        <section>
+            <h2>Data Pipeline: A High-Stress Simulation Environment</h2>
+            <p>To train a model that understands failure, we created a proprietary dataset of over 10,000 unique, physically-valid grid states. Using the **IEEE 118-bus system** and the `pandapower` simulator, we ran thousands of scenarios with randomized loads and a high probability of N-1 line contingencies.</p>
+        </section>
+
+        <section>
+            <h2>Results: High-Fidelity Prediction of Physical Stress</h2>
+            <p>The trained GAT model was evaluated on over 2,000 unseen, high-stress test scenarios. It successfully learned the non-linear physics of power flow, demonstrating its ability to serve as the core of a predictive reliability tool.</p>
+            <div class="card-container">
+                <div class="card highlight-card">
+                    <h3>4.3% Mean Absolute Error</h3>
+                    <p>The model predicted the exact post-contingency loading percentage on every transmission line with an average error of just 4.3%.</p>
+                </div>
+            </div>
+            <div class="image-container full-width-image">
+                <img src="physical_prediction/output/gnn_congestion_prediction_GAT.png" alt="GNN Congestion Prediction Visualization">
+                <p class="caption">Visualization of the GNN's prediction on a high-stress N-1 contingency scenario. The model accurately identifies the new "hot spots" (red lines) where congestion will occur after the initial fault.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GridOS. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
