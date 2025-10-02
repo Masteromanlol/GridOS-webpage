@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridOS | Technical Appendix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Grid<span class="highlight">OS</span></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="economics.html">Economics Engine</a></li>
+                <li><a href="physics.html">Physics Engine</a></li>
+                <li><a href="research.html">Research Synergy</a></li>
+                <li><a href="appendix.html" class="active">Technical Appendix</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Technical Appendix</h1>
+            <p class="subtitle">An overview of the project's code structure and key dependencies.</p>
+        </section>
+
+        <section>
+            <h2>Code Structure: A Modular Pipeline</h2>
+            <p>The project is organized into two primary modules, each representing a core engine of the GridOS platform.</p>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Physical Prediction Pipeline</h3>
+                    <p>A sequential, five-script pipeline for generating data and training the GNN:</p>
+                    <ul class="code-list">
+                        <li><code>01_ingest_grid_topology.py</code>: Builds the static grid graph in Neo4j.</li>
+                        <li><code>02_generate_simulation_data.py</code>: Runs Pandapower simulations to create scenarios.</li>
+                        <li><code>03_preprocess_for_gnn.py</code>: Queries Neo4j and creates the PyTorch Geometric data file.</li>
+                        <li><code>04_train_gnn_models.py</code>: Trains and benchmarks GNN models (GCN vs. GAT).</li>
+                        <li><code>05_evaluate_and_visualize.py</code>: Evaluates the model and generates output visuals.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Economic Forecasting Pipeline</h3>
+                    <p>A comprehensive script for data processing, model benchmarking, and reporting:</p>
+                     <ul class="code-list">
+                        <li><code>01_build_feature_set.py</code>: Ingests and merges multiple real-world NYISO CSVs.</li>
+                        <li><code>run_forecasting_models.py</code>: Trains Transformer, XGBoost, and SARIMA models, evaluates performance, and generates the final HTML report.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Dependencies</h2>
+            <p>The project is built on a modern, open-source data science and machine learning stack.</p>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Core ML & Data Science</h3>
+                    <ul>
+                        <li>Pandas & NumPy</li>
+                        <li>Scikit-learn</li>
+                        <li>Matplotlib & Seaborn</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Graph & Deep Learning</h3>
+                    <ul>
+                        <li>PyTorch</li>
+                        <li>PyTorch Geometric</li>
+                        <li>Neo4j Python Driver</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Time-Series & Simulation</h3>
+                    <ul>
+                        <li>Statsmodels (for SARIMA)</li>
+                        <li>XGBoost</li>
+                        <li>Pandapower</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GridOS. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
