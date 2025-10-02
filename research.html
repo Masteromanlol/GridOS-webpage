@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridOS | Research Synergy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Grid<span class="highlight">OS</span></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="economics.html">Economics Engine</a></li>
+                <li><a href="physics.html">Physics Engine</a></li>
+                <li><a href="research.html" class="active">Research Synergy</a></li>
+                <li><a href="appendix.html">Technical Appendix</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Research Synergy</h1>
+            <p class="subtitle">Aligning Commercial Innovation with Foundational Academic Research</p>
+        </section>
+
+        <section>
+            <h2>The Hodge Research Group & Power System Security Assessment</h2>
+            <p>Our work is deeply aligned with the cutting-edge research conducted by Professor Bri-Mathias Hodge's group at CU Boulder and NREL. A key focus of their work, led by PhD student Muhy Eddin Za'ter, is accelerating Power System Security Assessment (PSSA) using advanced AI, specifically **Multi-Task Learning (MTL)** frameworks.</p>
+        </section>
+
+        <section>
+            <h2>The Perfect Complement: Classification vs. Regression</h2>
+            <p>Analysis of their research reveals a powerful synergy. Their work and our GridOS project solve two different, but equally critical, sequential questions an operator faces after a grid fault:</p>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Hodge Group's Research (Classification)</h3>
+                    <p>Their MTL framework answers the first question: **"After the fault, will the system remain stable?"** It classifies the post-contingency state into one of several stability categories (e.g., stable, voltage unstable, transiently unstable).</p>
+                </div>
+                <div class="card">
+                    <h3>GridOS GNN (Regression)</h3>
+                    <p>Our GNN answers the essential follow-up question: **"Given the system *is* stable, where are the new high-stress points and what is the exact loading on every line?"** It provides a high-resolution, quantitative prediction.</p>
+                </div>
+            </div>
+            <p class="conclusion-text">This positions GridOS as the perfect "next step" in a complete security assessment workflow, providing the specific, actionable detail needed for an operator to take corrective action.</p>
+        </section>
+
+        <section>
+            <h2>A Unified Vision for Grid Intelligence</h2>
+            <p>This alignment demonstrates that GridOS is not just a clever engineering solution, but the commercial vanguard of a new, academically validated paradigm in power systems management—moving beyond siloed analysis to integrated, multi-faceted predictive intelligence.</p>
+            <div class="card-container full-width">
+                <div class="card">
+                    <h3>Side-by-Side Comparison</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Aspect</th>
+                                <th>Hodge Research Group</th>
+                                <th>GridOS GNN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>AI Task</strong></td>
+                                <td>Classification (Is it stable?)</td>
+                                <td>Regression (How bad is the stress?)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Key Innovation</strong></td>
+                                <td>Predicting multiple stability states efficiently</td>
+                                <td>Predicting high-resolution, continuous values</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Test System</strong></td>
+                                <td>IEEE 118-bus System</td>
+                                <td>IEEE 118-bus System</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GridOS. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
